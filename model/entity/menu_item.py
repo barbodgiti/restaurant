@@ -1,5 +1,9 @@
 from view.component_tbl import *
 
+class MenuItem:
+    def __init__(self, id, name, food_type, price, description):
+        pass
+
 menu_list_burger = [(1,"Burger",198),
              (2,"Cheese Burger",228),
              (3,"Mushroom Burger",178),

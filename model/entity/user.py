@@ -1,3 +1,5 @@
+# id, name, family, username, password, phone
+
 class User:
     def __init__(self, name, family, username, password, food, drink, more, bookingon=True):
         self.name = name

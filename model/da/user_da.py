@@ -1,6 +1,6 @@
 import mysql.connector
 
-from model.user import *
+from model.entity.user import *
 
 class user_da:
 
