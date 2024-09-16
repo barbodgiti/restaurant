@@ -1,15 +1,21 @@
 # id, name, family, username, password, phone
 
 class User:
-    def __init__(self, name, family, username, password, food, drink, more, bookingon=True):
+    def __init__(self, id, name, family, username, password, phone):
+        self.id = id
         self.name = name
         self.family = family
         self.username = username
         self.password = password
-        self.food = food
-        self.drink = drink
-        self.more = more
-        self.bookingon = bookingon
+        self.phone = phone
+
+    @property
+    def id(self):
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        self._id = id
 
     @property
     def name(self):
@@ -43,36 +49,12 @@ class User:
         self._password = password
 
     @property
-    def food(self):
-        return self._food
+    def phone(self):
+        return self._phone
 
-    @food.setter
-    def food(self, food):
-        self._food = food
-
-    @property
-    def drink(self):
-        return self._drink
-
-    @drink.setter
-    def drink(self, drink):
-        self._drink = drink
-
-    @property
-    def more(self):
-        return self._more
-
-    @more.setter
-    def more(self, more):
-        self._more = more
-
-    @property
-    def bookingon(self):
-        return self._bookingon
-
-    @bookingon.setter
-    def bookingon(self, bookingon):
-        self._bookingon = bookingon
+    @phone.setter
+    def phone(self, phone):
+        self._phone = phone
 
     def __str__(self):
         return f"{self.__dict__}"

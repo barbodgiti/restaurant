@@ -1,7 +1,7 @@
 from model.entity.user import User
 from model.da.user_da import user_da
 
-ali = User("kjhsk", "ikadshvk", "bafgsdgds", "qwe1234", "burger", "coke", "jackti", 1)
+ali = User("kjkhjkahsk", "ikadshvk", "bafgsdgds", "qwe1234", "burger", "coke")
 print(ali)
 
 oogh = user_da()

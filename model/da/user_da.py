@@ -9,12 +9,14 @@ class user_da:
         self.connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='root123',
+            password='barbod.87.08',
             database='mft'
         )
         self.cursor = self.connection.cursor()
 
-    def disconnect(self):
+    def disconnect(self, commit=False):
+        if commit:
+            self.connection.commit()
         self.cursor.close()
         self.connection.close()
 
@@ -22,23 +24,19 @@ class user_da:
         self.connect()
         self.cursor.execute("INSERT INTO user_tbl (name,family,username,password,food,drink,more,bookingon) VALUES ("
                             "%s,%s,%s,%s,%s,%s,%s,%s)",
-                            [user.name, user.family, user.username, user.password, user.food, user.drink, user.more,
-                             user.bookingon])
-        self.connection.commit()
-        self.disconnect()
+                            [user.name, user.family, user.username, user.passwordn])
+        self.disconnect(True)
 
     def edit(self, user):
         self.connect()
         self.cursor.execute("UPDATE user_tbl SET password=%s,food=%s,drink=%s,more=%s,bookingon=%s WHERE username=%s",
                             [user.name, user.family, user.password, user.food, user.drink, user.more, user.bookingon])
-        self.connection.commit()
-        self.disconnect()
+        self.disconnect(True)
 
     def remove(self, username):
         self.connect()
         self.cursor.execute("DELETE FROM user_tbl WHERE username=%s", [username])
-        self.connection.commit()
-        self.disconnect()
+        self.disconnect(True)
 
     def find_by_username_and_password(self, username, password):
         self.connect()
