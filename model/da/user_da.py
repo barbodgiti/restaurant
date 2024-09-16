@@ -22,15 +22,15 @@ class user_da:
 
     def save(self, user):
         self.connect()
-        self.cursor.execute("INSERT INTO user_tbl (id,name,family,username,password,phone) VALUES ("
-                            "%s,%s,%s,%s,%s,%s,%s,%s)",
-                            [user.id,user.name, user.family, user.username, user.passwordn])
+        self.cursor.execute(
+            "INSERT INTO user_tbl (id,name,family,username,password,phone) VALUES (""%s,%s,%s,%s,%s,%s)",
+            [user.id, user.name, user.family, user.username, user.password, user.phone])
         self.disconnect(True)
 
     def edit(self, user):
         self.connect()
-        self.cursor.execute("UPDATE user_tbl SET password=%s,food=%s,drink=%s,more=%s,bookingon=%s WHERE username=%s",
-                            [user.name, user.family, user.password, user.food, user.drink, user.more, user.bookingon])
+        self.cursor.execute("UPDATE user_tbl SET password=%s WHERE username=%s",
+                            [user.password, ])
         self.disconnect(True)
 
     def remove(self, username):
