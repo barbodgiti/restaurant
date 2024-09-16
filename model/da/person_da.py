@@ -7,7 +7,7 @@ class PersonDa:
 			host='localhost',
 			user='root',
 			password='barbod.87.08',
-			database='mft'
+			database='gks'
 		)
 		self.cursor = self.connection.cursor()
 

@@ -1,6 +1,6 @@
-create database mft;
+create database gks;
 
-create table mft.user_tbl(
+create table gks.user_tbl(
     id int primary key auto_increment,
     name varchar(20),
     family varchar(40),
