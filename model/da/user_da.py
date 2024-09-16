@@ -22,9 +22,9 @@ class user_da:
 
     def save(self, user):
         self.connect()
-        self.cursor.execute("INSERT INTO user_tbl (name,family,username,password,food,drink,more,bookingon) VALUES ("
+        self.cursor.execute("INSERT INTO user_tbl (id,name,family,username,password,phone) VALUES ("
                             "%s,%s,%s,%s,%s,%s,%s,%s)",
-                            [user.name, user.family, user.username, user.passwordn])
+                            [user.id,user.name, user.family, user.username, user.passwordn])
         self.disconnect(True)
 
     def edit(self, user):
