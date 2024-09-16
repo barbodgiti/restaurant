@@ -56,5 +56,6 @@ class User:
     def phone(self, phone):
         self._phone = phone
 
-    def __str__(self):
+
+    def __repr__(self):
         return f"{self.__dict__}"

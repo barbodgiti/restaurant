@@ -3,13 +3,13 @@ import mysql.connector
 from model.entity.user import *
 
 
-class user_da:
+class UserDa:
 
     def connect(self):
         self.connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='barbod.87.08',
+            password='root123',
             database='mft'
         )
         self.cursor = self.connection.cursor()

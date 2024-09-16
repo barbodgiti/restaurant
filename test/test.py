@@ -1,8 +1,8 @@
 from model.entity.user import User
-from model.da.user_da import user_da
+from model.da.user_da import UserDa
 
-ali = User("kjkhjkahsk", "ikadshvk", "bafgsdgds", "qwe1234", "burger", "coke")
+ali = User(1,"kjkhjkahsk", "ikadshvk", "bafgsdgds", "qwe1234", "0917")
 print(ali)
 
-oogh = user_da()
-oogh.save(ali)
+user_da = UserDa()
+user_da.save(ali)

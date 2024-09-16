@@ -56,3 +56,7 @@ class Order:
     @payment.setter
     def payment(self, payment):
         self._payment = payment
+
+
+    def __repr__(self):
+        return f"{self.__dict__}"
