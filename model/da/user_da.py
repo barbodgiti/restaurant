@@ -30,7 +30,7 @@ class UserDa:
     def edit(self, user):
         self.connect()
         self.cursor.execute("UPDATE user_tbl SET password=%s WHERE username=%s",
-                            [user.password, ])
+                            [user.password])
         self.disconnect(True)
 
     def remove(self, username):
