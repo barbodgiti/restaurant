@@ -1,10 +1,9 @@
 from model.da.user_da import *
 
 
-
 class UserController:
 
-    User_da = user_da()
+    User_da = UserDa()
 
     @classmethod
     def save(ksi, name, family, username, password, food, drink, more, bookingon):

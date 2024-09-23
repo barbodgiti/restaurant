@@ -25,6 +25,7 @@ class LoginView:
             msg.showinfo('LOGIN', "Login Successful")
             self.window.destroy()
             user_view = UserView()
+            user_view.window()
         else:
             msg.showerror('LOGIN', "Login Failed")
 
