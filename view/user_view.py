@@ -8,7 +8,7 @@ class UserView:
     def __init__(self):
         self.window = Tk()
         self.window.title("RESTAURANT")
-        self.window.geometry("1000x500")
+        self.window.geometry("1000x800")
 
         def food_tbl_click(row):
             print(row)
@@ -20,9 +20,9 @@ class UserView:
             print(row)
 
 
-        food_tbl = Table(self.window, ["Number","Food","Price"], [50,140,100], 20, 20, food_tbl_click)
-        drink_tbl = Table(self.window, ["Number","Drink","Price"], [50,140,100], 530, 320, drink_tbl_click)
-        more_tbl = Table(self.window, ["Number","More","Price"], [50,140,100], 530, 20, more_tbl_click)
+        food_tbl = Table(self.window, ["Number","Food","Price"], [100,140,100], 20, 20, food_tbl_click)
+        drink_tbl = Table(self.window, ["Number","Drink","Price"], [100,140,100], 530, 320, drink_tbl_click)
+        more_tbl = Table(self.window, ["Number","More","Price"], [100,140,100], 530, 20, more_tbl_click)
 
 
 
