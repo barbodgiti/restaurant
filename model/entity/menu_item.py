@@ -1,4 +1,6 @@
-from view.component_tbl import *
+# todo : validation
+from tools.validator import Validator
+
 
 class MenuItem:
     def __init__(self, id, name, food_type, price, description):
@@ -22,7 +24,7 @@ class MenuItem:
 
     @name.setter
     def name(self, name):
-        self._name = name
+        self._name = Validator.name_validator(name, "Invalid Name")
 
     @property
     def food_type(self):
