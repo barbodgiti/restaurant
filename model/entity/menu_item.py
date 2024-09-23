@@ -1,5 +1,4 @@
-# todo : validation
-from tools.validator import Validator
+from controller.validation import *
 
 
 class MenuItem:
@@ -24,7 +23,7 @@ class MenuItem:
 
     @name.setter
     def name(self, name):
-        self._name = Validator.name_validator(name, "Invalid Name")
+        self._name = Validation.name_validate(name, "Invalid Name")
 
     @property
     def food_type(self):
