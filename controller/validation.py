@@ -30,4 +30,11 @@ class Validation:
         else:
             raise ValueError(message)
 
+    @classmethod
+    def phone_validate(cls, phone, message):
+        if re.match(r"^[0-9]{11}$", phone):
+            return phone
+        else:
+            raise ValueError(message)
+
 

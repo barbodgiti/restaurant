@@ -24,14 +24,14 @@ class User:
 
     @name.setter
     def name(self, name):
-        self._name = name
+        self._name = Validation.name_validate(name, "Invalid Name")
     @property
     def family(self):
         return self._family
 
     @family.setter
     def family(self, family):
-        self._family = family
+        self._family = Validation.family_validate(family, "Invalid Family")
 
     @property
     def username(self):
@@ -39,7 +39,7 @@ class User:
 
     @username.setter
     def username(self, username):
-        self._username = username
+        self._username = Validation.username_validate(username, "Invalid Username")
 
     @property
     def password(self):
@@ -47,7 +47,7 @@ class User:
 
     @password.setter
     def password(self, password):
-        self._password = password
+        self._password = Validation.password_validate()(password, "Invalid Password")
 
     @property
     def phone(self):
@@ -55,7 +55,7 @@ class User:
 
     @phone.setter
     def phone(self, phone):
-        self._phone = phone
+        self._phone = Validation.phone_validate(phone, "Invalid Phone")
 
 
     def __repr__(self):
