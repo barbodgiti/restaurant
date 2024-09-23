@@ -2,7 +2,6 @@ from tkinter import *
 import tkinter.messagebox as msg
 
 from controller.user_controller import UserController
-from view.commponent import EntryWithBarel
 from view.user_view import *
 
 class LoginView:
