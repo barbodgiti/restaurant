@@ -8,7 +8,7 @@ class UserView:
     def __init__(self):
         self.window = Tk()
         self.window.title("RESTAURANT")
-        self.window.geometry("1000x800")
+        self.window.geometry("900x600")
 
         def food_tbl_click(row):
             print(row)
