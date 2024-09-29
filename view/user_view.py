@@ -48,7 +48,7 @@ class UserView:
         self.window.title("RESTAURANT")
         self.window.geometry("900x600")
 
-        def burger_tbl_click(row)
+        def burger_tbl_click(row):
             print(row)
 
         def pizza_tbl_click(row):
