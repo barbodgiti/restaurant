@@ -39,6 +39,9 @@ menu_list_more = [(1, "Fries", 80),
                   (8, "Bacon And Cheese With Chips", 350), ]
 
 
+sabad_list =[()]
+
+
 class UserView:
     def __init__(self):
         self.window = Tk()
@@ -58,7 +61,7 @@ class UserView:
             print(row)
 
         burger_tbl = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20, 20, burger_tbl_click)
-        pizza_tbl = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20, 20, pizza_tbl_click)
+        pizza_tbl = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20, 320, pizza_tbl_click)
         drink_tbl = Table(self.window, ["Number", "Drink", "Price"], [100, 140, 100], 530, 320, drink_tbl_click)
         more_tbl = Table(self.window, ["Number", "More", "Price"], [100, 140, 100], 530, 20, more_tbl_click)
 
@@ -66,5 +69,11 @@ class UserView:
         pizza_tbl.set_data(menu_list_pizza)
         drink_tbl.set_data(menu_list_drink)
         more_tbl.set_data(menu_list_more)
+
+        for itm in burger_tbl, pizza_tbl, drink_tbl, more_tbl:
+            sabad_list.append(itm)
+
+
+        print(sabad_list)
 
         self.window.mainloop()
