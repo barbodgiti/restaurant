@@ -15,7 +15,9 @@ class Table:
         self.table.place(x=x, y=y)
 
     def table_click(self, event):
+
         return self.clicker_function(tuple(self.table.item(self.table.focus())[("values")]))
+
 
     def clear_table(self):
         for items in self.table.get_children():

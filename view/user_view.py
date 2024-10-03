@@ -1,7 +1,4 @@
-from tkinter import *
-from view.commponent import *
 from view.component_tbl import *
-from tkinter import ttk
 
 menu_list_burger = [(1, "Burger", 198),
                     (2, "Cheese Burger", 228),
@@ -39,7 +36,7 @@ menu_list_more = [(1, "Fries", 80),
                   (8, "Bacon And Cheese With Chips", 350), ]
 
 
-sabad_list =[()]
+sabad_list =[]
 
 
 class UserView:
@@ -48,17 +45,24 @@ class UserView:
         self.window.title("RESTAURANT")
         self.window.geometry("900x600")
 
+
+
         def burger_tbl_click(row):
-            print(row)
+            #burg = print(row)
+            sabad_list.append(row)
+            #new_burg = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20,600, burger_tbl_click)
 
         def pizza_tbl_click(row):
-            print(row)
+            #piz = print(row)
+            sabad_list.append(row)
 
         def drink_tbl_click(row):
-            print(row)
+            #dri = print(row)
+            sabad_list.append(row)
 
         def more_tbl_click(row):
-            print(row)
+            #mro = print(row)
+            sabad_list.append(row)
 
         burger_tbl = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20, 20, burger_tbl_click)
         pizza_tbl = Table(self.window, ["Number", "Burger", "Price"], [100, 140, 100], 20, 320, pizza_tbl_click)
@@ -70,10 +74,9 @@ class UserView:
         drink_tbl.set_data(menu_list_drink)
         more_tbl.set_data(menu_list_more)
 
-        for itm in burger_tbl, pizza_tbl, drink_tbl, more_tbl:
-            sabad_list.append(itm)
+        #burger_list = list(filter(lambda p: p["burger"] == "", sabad_list))
 
-
-        print(sabad_list)
 
         self.window.mainloop()
+
+print(sabad_list)
